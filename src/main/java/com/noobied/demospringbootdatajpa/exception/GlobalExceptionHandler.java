@@ -18,4 +18,12 @@ public class GlobalExceptionHandler {
                 Optional.empty(),
                 HttpStatus.NOT_FOUND);
     }
+
+    @ExceptionHandler(IdProofNotFoundException.class)
+    public ResponseEntity<Object> handleIdProofNotFoundException(IdProofNotFoundException e) {
+        return StudentDtoHandler.studentDtoHandler(
+                e.getMessage(),
+                Optional.empty(),
+                HttpStatus.NOT_FOUND);
+    }
 }

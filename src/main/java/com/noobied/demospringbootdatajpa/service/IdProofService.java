@@ -6,4 +6,6 @@ import org.springframework.stereotype.Service;
 
 public interface IdProofService {
     IdProof saveIdProof(IdProof proof);
+
+    String updateIdProofDetails(String newId, int id);
 }
