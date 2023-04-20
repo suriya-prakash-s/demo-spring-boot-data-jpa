@@ -11,7 +11,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "tbl_id_proof")
+@Table(name = "tbl_id_proof",
+        uniqueConstraints = {
+                @UniqueConstraint(name = "aadhar_id_unique", columnNames = "aadharId")
+        })
 public class IdProof {
     //Primary key
     @Id
